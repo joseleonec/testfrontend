@@ -53,30 +53,26 @@ export class ClienteCreateComponent {
     const clienteData: any = {
       ...formValue,
       nombre: formValue.nombres, // Map nombres to nombre
-      estado: formValue.estado ? 'True' : 'False', // Map boolean to string
+      estado: formValue.estado, // Keep boolean
       // Defaults for missing fields
       identificacion: formValue.identificacion || '9999999999',
       edad: formValue.edad || 30,
       genero: formValue.genero || 'Otro',
-      clienteId: formValue.clienteId || 'new-id'
+      // Service will assign ID
     };
 
-    // Simulate success for hardcoded/demo purposes if service fails or just use service
     console.log('Sending data:', clienteData);
 
     this.clienteService.create(clienteData).subscribe({
       next: () => {
-        // Navigate or show success
          console.log('Cliente created successfully');
          this.isSubmitting = false;
-         this.router.navigate(['/clientes']); 
          alert('Cliente creado exitosamente');
+         this.router.navigate(['/clientes']); 
       },
       error: (error) => {
         console.error('Error creating cliente:', error);
-        // Fallback for demo if backend not ready
-        alert('Simulación: Cliente creado exitosamente (Backend no conectado)');
-        this.router.navigate(['/clientes']);
+        this.errorMessage = 'Error al crear el cliente.';
         this.isSubmitting = false;
       }
     });

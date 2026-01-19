@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { ClienteService } from '../../../services/cliente.service';
 
 @Component({
   selector: 'app-cliente-list',
@@ -9,36 +10,21 @@ import { Router } from '@angular/router';
   templateUrl: './cliente-list.component.html',
   styleUrl: './cliente-list.component.css'
 })
-export class ClienteListComponent {
+export class ClienteListComponent implements OnInit {
   
-  clientes = [
-    {
-      clienteId: '1',
-      nombres: 'Jose Lema',
-      direccion: 'Otavalo sn y principal',
-      telefono: '098254785',
-      contrasena: '12345',
-      estado: true
-    },
-    {
-      clienteId: '2',
-      nombres: 'Marianela Montalvo',
-      direccion: 'Amazonas y NNUU',
-      telefono: '097548965',
-      contrasena: '56789',
-      estado: true
-    },
-    {
-      clienteId: '3',
-      nombres: 'Juan Osorio',
-      direccion: '13 junio y Equinoccial',
-      telefono: '098874587',
-      contrasena: '124578',
-      estado: false
-    }
-  ];
+  clientes: any[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private clienteService: ClienteService) {}
+
+  ngOnInit(): void {
+    this.loadClientes();
+  }
+
+  loadClientes() {
+    this.clienteService.getAll().subscribe(data => {
+      this.clientes = data;
+    });
+  }
 
   crearCliente() {
     this.router.navigate(['/clientes/create']);
@@ -46,13 +32,13 @@ export class ClienteListComponent {
 
   editarCliente(cliente: any) {
     console.log('Editar cliente:', cliente);
-    // Logic to navigate to edit page could go here
-    // this.router.navigate(['/clientes/edit', cliente.clienteId]); 
   }
 
   eliminarCliente(id: string) {
     if(confirm('¿Está seguro de eliminar este cliente?')) {
-        this.clientes = this.clientes.filter(c => c.clienteId !== id);
+        this.clienteService.delete(id).subscribe(() => {
+          this.loadClientes();
+        });
     }
   }
 
