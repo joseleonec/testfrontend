@@ -1,33 +1,21 @@
-<div class="container">
-  <h2>Generar Reporte</h2>
-
+<div class="container"> <!-- Keep container for alignment if needed, or remove -->
+  
   <div *ngIf="errorMessage" class="error-message">
     {{ errorMessage }}
   </div>
 
-  <form [formGroup]="reporteForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="fechaInicio">Fecha Inicio</label>
-      <input type="date" id="fechaInicio" formControlName="fechaInicio">
-    </div>
-
-    <div class="form-group">
-      <label for="fechaFin">Fecha Fin</label>
-      <input type="date" id="fechaFin" formControlName="fechaFin">
-    </div>
-
-    <div class="form-group">
-      <label for="clienteId">Usuario (Cliente ID - ej: juanosorio)</label>
-      <input type="text" id="clienteId" formControlName="clienteId">
-    </div>
-
-    <button type="submit" [disabled]="reporteForm.invalid || isSubmitting">
-      {{ isSubmitting ? 'Generando...' : 'Generar' }}
-    </button>
-  </form>
+  <app-reporte-search *ngIf="!reporteData && !isLoading" (search)="onSearch($event)"></app-reporte-search>
+  
+  <div *ngIf="isLoading" class="loading-message">
+     Generando reporte...
+  </div>
 
   <div *ngIf="reporteData" class="report-results">
-    <h3>Resultados del Reporte</h3>
+    <div class="header-results">
+        <h3>Resultados del Reporte</h3>
+        <button class="btn-primary" (click)="clearReport()" style="width: auto;">Volver</button>
+    </div>
+
     <div *ngFor="let item of reporteData" class="account-card">
       <h4>Cuenta: {{ item.cuenta.numeroCuenta }} ({{ item.cuenta.tipoCuenta }})</h4>
       <p>Saldo: {{ item.cuenta.saldoDisponible }}</p>
@@ -56,5 +44,10 @@
         </tbody>
       </table>
     </div>
+
+    <div *ngIf="reporteData.length === 0" class="no-results">
+        <p style="text-align: center; color: #666;">No se encontraron registros para los criterios seleccionados.</p>
+    </div>
   </div>
+
 </div>

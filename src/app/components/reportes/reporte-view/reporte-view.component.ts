@@ -1,56 +1,47 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ReporteResponse } from '../../../models/reporte.dto';
 import { ReporteService } from '../../../services/reporte.service';
+import { ReporteSearchComponent } from '../reporte-search/reporte-search.component';
 
 @Component({
   selector: 'app-reporte-view',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReporteSearchComponent],
   templateUrl: './reporte-view.component.html',
   styleUrls: ['./reporte-view.component.css']
 })
 export class ReporteViewComponent {
-  reporteForm: FormGroup;
   reporteData: ReporteResponse | null = null;
-  isSubmitting = false;
   errorMessage = '';
+  isLoading = false;
 
   constructor(
-    private fb: FormBuilder,
     private reporteService: ReporteService
-  ) {
-    this.reporteForm = this.fb.group({
-      fechaInicio: ['', Validators.required],
-      fechaFin: ['', Validators.required],
-      clienteId: ['', Validators.required]
-    });
-  }
+  ) {}
 
-  onSubmit(): void {
-    if (this.reporteForm.invalid) {
-      return;
-    }
-
-    this.isSubmitting = true;
+  onSearch(criteria: {fechaInicio: string, fechaFin: string, clienteId: string}): void {
+    this.isLoading = true;
     this.errorMessage = '';
-    this.reporteData = null;
+    this.reporteData = null; // Clear previous results
 
-    const { fechaInicio, fechaFin, clienteId } = this.reporteForm.value;
-
-    console.log('Generating report for:', clienteId, fechaInicio, fechaFin);
+    console.log('Generating report for:', criteria.clienteId, criteria.fechaInicio, criteria.fechaFin);
     
-    this.reporteService.getReporte(fechaInicio, fechaFin, clienteId).subscribe({
+    this.reporteService.getReporte(criteria.fechaInicio, criteria.fechaFin, criteria.clienteId).subscribe({
       next: (data) => {
         this.reporteData = data;
-        this.isSubmitting = false;
+        this.isLoading = false;
       },
       error: (error) => {
         console.error('Error fetching reporte:', error);
         this.errorMessage = 'Error al generar el reporte.';
-        this.isSubmitting = false;
+        this.isLoading = false;
       }
     });
+  }
+
+  clearReport(): void {
+    this.reporteData = null;
+    this.errorMessage = '';
   }
 }
