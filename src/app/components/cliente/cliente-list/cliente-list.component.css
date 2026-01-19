@@ -1,0 +1,70 @@
+.clients-view {
+  width: 100%;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 500; /* Regular weight typical of the font in image */
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.actions-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  flex: 0 0 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.new-button {
+  background-color: #ffd700; /* Yellow */
+  color: #000;
+  border: none;
+  border-radius: 4px; /* Slight radius */
+  padding: 10px 40px; /* Wide button */
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.new-button:hover {
+  background-color: #ffcc00;
+}
+
+.data-table-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: white;
+  min-height: 400px; /* Force some height for the empty grid look */
+}
+
+.clients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.clients-table tr.empty-row td {
+  height: 60px; /* Height of rows in the image */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.clients-table tr:last-child td {
+  border-bottom: none;
+}

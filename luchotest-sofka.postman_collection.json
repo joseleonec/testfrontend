@@ -1,0 +1,3084 @@
+{
+  "info": {
+    "_postman_id": "f4f36640-873f-405e-9337-553043464903",
+    "name": "luchotest-sofka",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37389597"
+  },
+  "item": [
+    {
+      "name": "clientes",
+      "item": [
+        {
+          "name": "save",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46YWRtaW4="
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Juan Osorio\",\n    \"genero\": \"Masculino\",\n    \"edad\": 30,\n    \"identificacion\": \"000000003\",\n    \"direccion\": \"13 junio y Equinoccial\",\n    \"telefono\": \"098874587\",\n    \"clienteId\": \"juanosorio\",\n    \"contrasena\": \"1245\",\n    \"estado\": \"True\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/clientes",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "clientes"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nombre\": \"Juan Osorio\",\n    \"genero\": \"Masculino\",\n    \"edad\": 30,\n    \"identificacion\": \"123456789\",\n    \"direccion\": \"Calle 123 # 45-67\",\n    \"telefono\": \"3001234567\",\n    \"clienteId\": \"juanosorio\",\n    \"contrasena\": \"password123\",\n    \"estado\": \"True\"\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/clientes",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "clientes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 20:44:19 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"clienteId\": \"juanosorio\",\n    \"contrasena\": \"password123\",\n    \"direccion\": \"Calle 123 # 45-67\",\n    \"edad\": 30,\n    \"estado\": \"True\",\n    \"genero\": \"Masculino\",\n    \"id\": 1,\n    \"identificacion\": \"123456789\",\n    \"nombre\": \"Juan Osorio\",\n    \"telefono\": \"3001234567\"\n}"
+            },
+            {
+              "name": "Jose Lema",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Basic YWRtaW46YWRtaW4="
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nombre\": \"Jose Lema\",\n    \"genero\": \"Masculino\",\n    \"edad\": 30,\n    \"identificacion\": \"000000001\",\n    \"direccion\": \"Otavalo sn y principal\",\n    \"telefono\": \"098254785\",\n    \"clienteId\": \"joselema\",\n    \"contrasena\": \"1234\",\n    \"estado\": \"True\"\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/clientes",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "clientes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 20:38:27 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"nombre\": \"Jose Lema\",\n    \"genero\": \"Masculino\",\n    \"edad\": 30,\n    \"identificacion\": \"000000001\",\n    \"direccion\": \"Otavalo sn y principal\",\n    \"telefono\": \"098254785\",\n    \"clienteId\": \"joselema\",\n    \"estado\": \"True\"\n}"
+            },
+            {
+              "name": "Marianela Montalvo",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Basic YWRtaW46YWRtaW4="
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nombre\": \"Marianela Montalvo\",\n    \"genero\": \"Femenino\",\n    \"edad\": 30,\n    \"identificacion\": \"000000002\",\n    \"direccion\": \"Amazonas y NNUU\",\n    \"telefono\": \"097548965\",\n    \"clienteId\": \"marianelamontalvo\",\n    \"contrasena\": \"5678\",\n    \"estado\": \"True\"\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/clientes",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "clientes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 20:38:29 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2,\n    \"nombre\": \"Marianela Montalvo\",\n    \"genero\": \"Femenino\",\n    \"edad\": 30,\n    \"identificacion\": \"000000002\",\n    \"direccion\": \"Amazonas y NNUU\",\n    \"telefono\": \"097548965\",\n    \"clienteId\": \"marianelamontalvo\",\n    \"estado\": \"True\"\n}"
+            },
+            {
+              "name": "Juan Osorio",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Basic YWRtaW46YWRtaW4="
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nombre\": \"Juan Osorio\",\n    \"genero\": \"Masculino\",\n    \"edad\": 30,\n    \"identificacion\": \"000000003\",\n    \"direccion\": \"13 junio y Equinoccial\",\n    \"telefono\": \"098874587\",\n    \"clienteId\": \"juanosorio\",\n    \"contrasena\": \"1245\",\n    \"estado\": \"True\"\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/clientes",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "clientes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 20:38:32 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 3,\n    \"nombre\": \"Juan Osorio\",\n    \"genero\": \"Masculino\",\n    \"edad\": 30,\n    \"identificacion\": \"000000003\",\n    \"direccion\": \"13 junio y Equinoccial\",\n    \"telefono\": \"098874587\",\n    \"clienteId\": \"juanosorio\",\n    \"estado\": \"True\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "read",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/clientes/2",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "clientes",
+                "2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/clientes/1",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "clientes",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 20:38:56 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"nombre\": \"Jose Lema\",\n    \"genero\": \"Masculino\",\n    \"edad\": 30,\n    \"identificacion\": \"000000001\",\n    \"direccion\": \"Otavalo sn y principal\",\n    \"telefono\": \"098254785\",\n    \"clienteId\": \"joselema\",\n    \"estado\": \"True\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Juan Osorio\",\n    \"genero\": \"Masculino\",\n    \"edad\": 30,\n    \"identificacion\": \"000000003\",\n    \"direccion\": \"13 junio y Equinoccial\",\n    \"telefono\": \"098874587\",\n    \"clienteId\": \"juanosorio\",\n    \"contrasena\": \"1245\",\n    \"estado\": \"True\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/clientes/1",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "clientes",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nombre\": \"Juan Osorio Updated\",\n    \"genero\": \"Masculino\",\n    \"edad\": 31,\n    \"identificacion\": \"123456789\",\n    \"direccion\": \"Calle New # 99-99\",\n    \"telefono\": \"3009999999\",\n    \"clienteId\": \"juanosorio\",\n    \"contrasena\": \"newpassword\",\n    \"estado\": \"True\"\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/clientes/1",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "clientes",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 19:53:52 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"clienteId\": \"juanosorio\",\n    \"contrasena\": \"newpassword\",\n    \"direccion\": \"Calle New # 99-99\",\n    \"edad\": 31,\n    \"estado\": \"True\",\n    \"genero\": \"Masculino\",\n    \"id\": 1,\n    \"identificacion\": \"123456789\",\n    \"nombre\": \"Juan Osorio Updated\",\n    \"telefono\": \"3009999999\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/clientes/100",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "clientes",
+                "100"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "204",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/clientes/1",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "clientes",
+                    "1"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 20:50:03 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "404",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/clientes/100",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "clientes",
+                    "100"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 20:50:27 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"detail\": \"Cliente no encontrado con id: 100\",\n    \"message\": \"Entidad no encontrada\",\n    \"path\": \"/clientes/100\",\n    \"statusCode\": \"404 NOT_FOUND\",\n    \"timestamp\": \"2026-01-16 03:50:27\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cuentas",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"tipoCuenta\": \"Corriente\",\n    \"numeroCuenta\": \"585545\",\n    \"saldoInicial\": 1000,\n    \"estado\": \"True\",\n    \"clienteId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/cuentas",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "cuentas"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "400",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"tipoCuenta\": \"Ahorros\",\r\n    \"numeroCuenta\": \"4789562\",\r\n    \"saldoInicial\": 2000.00\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 20:21:48 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-01-16T20:21:48.804Z\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<co.com.sofka.luchotest.persistence.entity.CuentaEntity> co.com.sofka.luchotest.controller.CuentaController.crearCuenta(co.com.sofka.luchotest.controller.dto.CuentaCreateDTO): [Field error in object 'cuentaCreateDTO' on field 'estado': rejected value [null]; codes [NotBlank.cuentaCreateDTO.estado,NotBlank.estado,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cuentaCreateDTO.estado,estado]; arguments []; default message [estado]]; default message [no debe estar vacío]] \\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:159)\\r\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:230)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:180)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)\\r\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)\\r\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132)\\r\\n\\tat org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)\\r\\n\\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:247)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)\\r\\n\\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)\\r\\n\\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)\\r\\n\\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\\r\\n\\tat org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\\r\\n\\tat org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)\\r\\n\\tat org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)\\r\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)\\r\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)\\r\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)\\r\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)\\r\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)\\r\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)\\r\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)\\r\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)\\r\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)\\r\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\\r\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)\\r\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)\\r\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)\\r\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)\\r\\n\\tat java.base/java.lang.Thread.run(Thread.java:1583)\\r\\n\",\n    \"message\": \"Validation failed for object='cuentaCreateDTO'. Error count: 1\",\n    \"errors\": [\n        {\n            \"objectName\": \"cuentaCreateDTO\",\n            \"field\": \"estado\",\n            \"rejectedValue\": null,\n            \"codes\": [\n                \"NotBlank.cuentaCreateDTO.estado\",\n                \"NotBlank.estado\",\n                \"NotBlank.java.lang.String\",\n                \"NotBlank\"\n            ],\n            \"arguments\": [\n                {\n                    \"arguments\": null,\n                    \"code\": \"estado\",\n                    \"codes\": [\n                        \"cuentaCreateDTO.estado\",\n                        \"estado\"\n                    ],\n                    \"defaultMessage\": \"estado\"\n                }\n            ],\n            \"bindingFailure\": false,\n            \"code\": \"NotBlank\",\n            \"defaultMessage\": \"no debe estar vacío\"\n        }\n    ],\n    \"path\": \"/cuentas\"\n}"
+            },
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"tipoCuenta\": \"Ahorros\",\r\n    \"numeroCuenta\": \"47895633332\",\r\n    \"saldoInicial\": 200.00,\r\n    \"estado\": \"True\",\r\n    \"clienteId\": 1\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 19:50:39 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"tipoCuenta\": \"Ahorros\",\n    \"saldoInicial\": 200,\n    \"estado\": true,\n    \"clienteId\": 1\n}"
+            },
+            {
+              "name": "478758",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoCuenta\": \"Ahorro\",\n    \"numeroCuenta\": \"478758\",\n    \"saldoInicial\": 2000.0,\n    \"estado\": \"True\",\n    \"clienteId\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 21:36:02 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"tipoCuenta\": \"Ahorro\",\n    \"numeroCuenta\": \"478758\",\n    \"saldoInicial\": 2000,\n    \"saldoDisponible\": 2000,\n    \"estado\": \"True\",\n    \"clienteId\": 1\n}"
+            },
+            {
+              "name": "225487",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoCuenta\": \"Corriente\",\n    \"numeroCuenta\": \"225487\",\n    \"saldoInicial\": 100.0,\n    \"estado\": \"True\",\n    \"clienteId\": 2\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 21:36:09 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2,\n    \"tipoCuenta\": \"Corriente\",\n    \"numeroCuenta\": \"225487\",\n    \"saldoInicial\": 100,\n    \"saldoDisponible\": 100,\n    \"estado\": \"True\",\n    \"clienteId\": 2\n}"
+            },
+            {
+              "name": "495878",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoCuenta\": \"Ahorros\",\n    \"numeroCuenta\": \"495878\",\n    \"saldoInicial\": 0.0,\n    \"estado\": \"True\",\n    \"clienteId\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 21:36:17 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 3,\n    \"tipoCuenta\": \"Ahorros\",\n    \"numeroCuenta\": \"495878\",\n    \"saldoInicial\": 0,\n    \"saldoDisponible\": 0,\n    \"estado\": \"True\",\n    \"clienteId\": 3\n}"
+            },
+            {
+              "name": "496825",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoCuenta\": \"Ahorros\",\n    \"numeroCuenta\": \"496825\",\n    \"saldoInicial\": 540.0,\n    \"estado\": \"True\",\n    \"clienteId\": 2\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 21:36:24 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 4,\n    \"tipoCuenta\": \"Ahorros\",\n    \"numeroCuenta\": \"496825\",\n    \"saldoInicial\": 540,\n    \"saldoDisponible\": 540,\n    \"estado\": \"True\",\n    \"clienteId\": 2\n}"
+            },
+            {
+              "name": "585545",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoCuenta\": \"Corriente\",\n    \"numeroCuenta\": \"585545\",\n    \"saldoInicial\": 1000,\n    \"estado\": \"True\",\n    \"clienteId\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 21:36:31 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 5,\n    \"tipoCuenta\": \"Corriente\",\n    \"numeroCuenta\": \"585545\",\n    \"saldoInicial\": 1000,\n    \"saldoDisponible\": 1000,\n    \"estado\": \"True\",\n    \"clienteId\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "read",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/cuentas/:cuentaId",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "cuentas",
+                ":cuentaId"
+              ],
+              "variable": [
+                {
+                  "key": "cuentaId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas/:cuentaId",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas",
+                    ":cuentaId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "cuentaId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 19:51:25 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"tipoCuenta\": \"Ahorros\",\n    \"saldoInicial\": 200,\n    \"estado\": true,\n    \"clienteId\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tipoCuenta\": \"Ahorros\",\r\n    \"numeroCuenta\": \"478956\",\r\n    \"estado\": \"True\",\r\n    \"saldoInicial\": 2000.00\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/cuentas/1",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "cuentas",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "400",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"tipoCuenta\": \"Ahorros\",\r\n    \"numeroCuenta\": \"478956\",\r\n    \"saldoInicial\": 2000.00\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas/1",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas",
+                    "1"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 20:21:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"timestamp\": \"2026-01-16T20:21:30.295Z\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<co.com.sofka.luchotest.persistence.entity.CuentaEntity> co.com.sofka.luchotest.controller.CuentaController.actualizarCuenta(java.lang.Long,co.com.sofka.luchotest.controller.dto.CuentaCreateDTO): [Field error in object 'cuentaCreateDTO' on field 'estado': rejected value [null]; codes [NotBlank.cuentaCreateDTO.estado,NotBlank.estado,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cuentaCreateDTO.estado,estado]; arguments []; default message [estado]]; default message [no debe estar vacío]] \\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:159)\\r\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:230)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:180)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)\\r\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)\\r\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132)\\r\\n\\tat org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)\\r\\n\\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:247)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)\\r\\n\\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)\\r\\n\\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)\\r\\n\\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\\r\\n\\tat org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\\r\\n\\tat org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)\\r\\n\\tat org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)\\r\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)\\r\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)\\r\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)\\r\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)\\r\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)\\r\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)\\r\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)\\r\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)\\r\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)\\r\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)\\r\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\\r\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)\\r\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)\\r\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)\\r\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)\\r\\n\\tat java.base/java.lang.Thread.run(Thread.java:1583)\\r\\n\",\n    \"message\": \"Validation failed for object='cuentaCreateDTO'. Error count: 1\",\n    \"errors\": [\n        {\n            \"objectName\": \"cuentaCreateDTO\",\n            \"field\": \"estado\",\n            \"rejectedValue\": null,\n            \"codes\": [\n                \"NotBlank.cuentaCreateDTO.estado\",\n                \"NotBlank.estado\",\n                \"NotBlank.java.lang.String\",\n                \"NotBlank\"\n            ],\n            \"arguments\": [\n                {\n                    \"arguments\": null,\n                    \"code\": \"estado\",\n                    \"codes\": [\n                        \"cuentaCreateDTO.estado\",\n                        \"estado\"\n                    ],\n                    \"defaultMessage\": \"estado\"\n                }\n            ],\n            \"bindingFailure\": false,\n            \"code\": \"NotBlank\",\n            \"defaultMessage\": \"no debe estar vacío\"\n        }\n    ],\n    \"path\": \"/cuentas/1\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/cuentas/:cuentaId",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "cuentas",
+                ":cuentaId"
+              ],
+              "variable": [
+                {
+                  "key": "cuentaId",
+                  "value": "100"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "204",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas/:cuentaId",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas",
+                    ":cuentaId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "cuentaId",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 20:36:23 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "404",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas/:cuentaId",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas",
+                    ":cuentaId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "cuentaId",
+                      "value": "100"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 20:36:34 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"detail\": \"Cuenta no encontrada con id: 100\",\n    \"message\": \"Entidad no encontrada\",\n    \"path\": \"/cuentas/100\",\n    \"statusCode\": \"404 NOT_FOUND\",\n    \"timestamp\": \"2026-01-16 03:36:34\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "movimientos",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46YWRtaW4="
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"tipoMovimiento\": \"RETIRO3\",\n    \"valor\": 540.00,\n    \"cuentaId\": 4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/movimientos",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "movimientos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "400",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoMovimiento\": \"rETIRO\",\n    \"valor\": -300.25,\n    \"cuentaId\": 1\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 19:54:27 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"detail\": \"Saldo insuficiente\",\n    \"message\": \"Estado ilegal de la aplicación\",\n    \"path\": \"/movimientos\",\n    \"statusCode\": \"404 NOT_FOUND\",\n    \"timestamp\": \"2026-01-17 02:54:27\"\n}"
+            },
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoMovimiento\": \"rETIRO\",\n    \"valor\": 300.25,\n    \"cuentaId\": 1\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 19:54:48 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"fecha\": \"2026-01-17T14:54:48.3457087\",\n    \"tipoMovimiento\": \"rETIRO\",\n    \"valor\": 300.25,\n    \"saldo\": 500.25,\n    \"cuentaId\": 1\n}"
+            },
+            {
+              "name": "Retiro de 575",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Basic YWRtaW46YWRtaW4="
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoMovimiento\": \"RETIRO\",\n    \"valor\": 575.00,\n    \"cuentaId\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 14:20:39 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"fecha\": \"2026-01-18T09:20:39.3082095\",\n    \"tipoMovimiento\": \"RETIRO\",\n    \"valor\": -575,\n    \"saldoInicial\": 2000,\n    \"saldo\": 1425,\n    \"cuentaId\": 1\n}"
+            },
+            {
+              "name": "Deposito de 600",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Basic YWRtaW46YWRtaW4="
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoMovimiento\": \"DEPOSITO\",\n    \"valor\": 600.00,\n    \"cuentaId\": 2\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 14:20:41 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 2,\n    \"fecha\": \"2026-01-18T09:20:41.8015524\",\n    \"tipoMovimiento\": \"DEPOSITO\",\n    \"valor\": 600,\n    \"saldoInicial\": 100,\n    \"saldo\": 700,\n    \"cuentaId\": 2\n}"
+            },
+            {
+              "name": "Deposito de 150",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Basic YWRtaW46YWRtaW4="
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoMovimiento\": \"DEPOSITO\",\n    \"valor\": 150.00,\n    \"cuentaId\": 3\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 14:20:47 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 3,\n    \"fecha\": \"2026-01-18T09:20:47.0571055\",\n    \"tipoMovimiento\": \"DEPOSITO\",\n    \"valor\": 150,\n    \"saldoInicial\": 0,\n    \"saldo\": 150,\n    \"cuentaId\": 3\n}"
+            },
+            {
+              "name": "Retiro de 540",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Basic YWRtaW46YWRtaW4="
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tipoMovimiento\": \"RETIRO\",\n    \"valor\": 540.00,\n    \"cuentaId\": 4\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 14:21:00 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 4,\n    \"fecha\": \"2026-01-18T09:21:00.0392086\",\n    \"tipoMovimiento\": \"RETIRO\",\n    \"valor\": -540,\n    \"saldoInicial\": 540,\n    \"saldo\": 0,\n    \"cuentaId\": 4\n}"
+            }
+          ]
+        },
+        {
+          "name": "read",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/movimientos/1",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "movimientos",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos/1",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 19:55:03 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"fecha\": \"2026-01-17T14:54:48.345709\",\n    \"tipoMovimiento\": \"rETIRO\",\n    \"valor\": 300.25,\n    \"saldo\": 500.25,\n    \"cuentaId\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"fecha\": \"2026-01-16T12:00:00\",\n    \"tipoMovimiento\": \"Retiro\",\n    \"valor\": -100.00,\n    \"cuentaId\": 1\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/movimientos/1",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "movimientos",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "update",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"fecha\": \"2026-01-16T12:00:00\",\n    \"tipoMovimiento\": \"Retiro\",\n    \"valor\": -100.00,\n    \"saldo\": 2400.00\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos/1",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 21:00:07 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"fecha\": \"2026-01-16T12:00:00\",\n    \"id\": 1,\n    \"saldo\": 2400,\n    \"tipoMovimiento\": \"Retiro\",\n    \"valor\": -100\n}"
+            },
+            {
+              "name": "400",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"fecha\": \"2026-01-16T12:00:00\",\n    \"tipoMovimiento\": \"Retiro\",\n    \"valor\": -100.00,\n    \"saldo\": 2400.00\n  }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos/1",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos",
+                    "1"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 19:55:34 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"detail\": \"{cuentaId=no debe ser nulo}\",\n    \"message\": \"Valor de Campo inválido\",\n    \"path\": \"/movimientos/1\",\n    \"statusCode\": \"400 BAD_REQUEST\",\n    \"timestamp\": \"2026-01-17 02:55:34\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/movimientos/1",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "movimientos",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "204",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/movimientos/1",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "movimientos",
+                    "1"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 21:00:14 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reportes",
+      "item": [
+        {
+          "name": "reportes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"clienteId\": 2,\r\n    \"fechaInicio\": \"2026-01-01\",\r\n    \"fechaFin\": \"2026-01-31\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/reportes",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "reportes"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "204",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"clienteId\": 104,\r\n    \"fechaInicio\": \"2026-01-01\",\r\n    \"fechaFin\": \"2026-01-31\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/reportes",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "reportes"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 17:23:43 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"clienteId\": 102,\r\n    \"fechaInicio\": \"2026-01-01\",\r\n    \"fechaFin\": \"2026-01-31\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/reportes",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "reportes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 17:24:51 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"cuenta\": {\n            \"id\": 4,\n            \"tipoCuenta\": \"Ahorros\",\n            \"numeroCuenta\": \"4789562\",\n            \"saldoInicial\": 3000.25,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"fecha\": \"2026-01-17T12:07:11.547519\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": 500,\n                \"saldo\": 2500,\n                \"cuentaId\": 4\n            },\n            {\n                \"fecha\": \"2026-01-17T12:07:34.325798\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": 500.25,\n                \"saldo\": 3000.25,\n                \"cuentaId\": 4\n            }\n        ]\n    },\n    {\n        \"cuenta\": {\n            \"id\": 5,\n            \"tipoCuenta\": \"Ahorros\",\n            \"numeroCuenta\": \"478956332\",\n            \"saldoInicial\": 2900.25,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"fecha\": \"2026-01-17T12:21:32.261906\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": 500.25,\n                \"saldo\": 2500.25,\n                \"cuentaId\": 5\n            },\n            {\n                \"fecha\": \"2026-01-17T12:21:37.463133\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": 700.25,\n                \"saldo\": 3200.5,\n                \"cuentaId\": 5\n            },\n            {\n                \"fecha\": \"2026-01-17T12:21:40.846636\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": -300.25,\n                \"saldo\": 2900.25,\n                \"cuentaId\": 5\n            }\n        ]\n    }\n]"
+            },
+            {
+              "name": "reportes",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"clienteId\": 1,\r\n    \"fechaInicio\": \"2026-01-01\",\r\n    \"fechaFin\": \"2026-01-31\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/reportes",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "reportes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 17 Jan 2026 21:37:47 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"cuenta\": {\n            \"id\": 5,\n            \"tipoCuenta\": \"Corriente\",\n            \"numeroCuenta\": \"585545\",\n            \"saldoInicial\": 1000,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": null\n    },\n    {\n        \"cuenta\": {\n            \"id\": 1,\n            \"tipoCuenta\": \"Ahorro\",\n            \"numeroCuenta\": \"478758\",\n            \"saldoInicial\": 2000,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"id\": 1,\n                \"fecha\": \"2026-01-17T16:36:47.325061\",\n                \"tipoMovimiento\": \"RETIRO\",\n                \"valor\": -575,\n                \"saldoInicial\": 2000,\n                \"saldo\": 1425,\n                \"cuentaId\": 1\n            }\n        ]\n    }\n]"
+            },
+            {
+              "name": "Marianela Montalvo",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"clienteId\": 2,\r\n    \"fechaInicio\": \"2026-01-01\",\r\n    \"fechaFin\": \"2026-01-31\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BASE_URL}}/reportes",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "reportes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 14:21:44 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"cuenta\": {\n            \"id\": 2,\n            \"tipoCuenta\": \"Corriente\",\n            \"numeroCuenta\": \"225487\",\n            \"saldoDisponible\": 700,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"id\": 2,\n                \"fecha\": \"2026-01-18T09:20:41.801552\",\n                \"tipoMovimiento\": \"DEPOSITO\",\n                \"valor\": 600,\n                \"saldoInicial\": 100,\n                \"saldo\": 700,\n                \"cuentaId\": 2\n            }\n        ]\n    },\n    {\n        \"cuenta\": {\n            \"id\": 4,\n            \"tipoCuenta\": \"Ahorros\",\n            \"numeroCuenta\": \"496825\",\n            \"saldoDisponible\": 0,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"id\": 4,\n                \"fecha\": \"2026-01-18T09:21:00.039209\",\n                \"tipoMovimiento\": \"RETIRO\",\n                \"valor\": -540,\n                \"saldoInicial\": 540,\n                \"saldo\": 0,\n                \"cuentaId\": 4\n            }\n        ]\n    }\n]"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "password",
+        "value": "admin",
+        "type": "string"
+      },
+      {
+        "key": "username",
+        "value": "admin",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

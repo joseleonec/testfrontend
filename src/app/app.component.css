@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top-header {
+  height: 60px;
+  display: flex;
+  justify-content: center; /* Center the logo */
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1e2a4a; /* Dark blue color */
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.layout-body {
+  display: flex;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: white;
+}

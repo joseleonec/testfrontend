@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>{{ isEditing ? 'Editar Cliente' : 'Nuevo Cliente' }}</h2>
+  
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombres">Nombres</label>
+      <input type="text" id="nombres" formControlName="nombres">
+    </div>
+
+    <div class="form-group">
+      <label for="direccion">Dirección</label>
+      <input type="text" id="direccion" formControlName="direccion">
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono</label>
+      <input type="text" id="telefono" formControlName="telefono">
+    </div>
+
+    <div class="form-group">
+      <label for="contrasena">Contraseña</label>
+      <input type="password" id="contrasena" formControlName="contrasena">
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label for="estado">Estado</label>
+      <input type="checkbox" id="estado" formControlName="estado">
+    </div>
+
+    <button type="submit" [disabled]="clienteForm.invalid || isSubmitting">
+      {{ isSubmitting ? 'Guardando...' : 'Guardar' }}
+    </button>
+  </form>
+</div>

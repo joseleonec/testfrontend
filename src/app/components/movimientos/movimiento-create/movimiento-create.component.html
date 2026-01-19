@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>Realizar Movimiento</h2>
+  
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+
+  <form [formGroup]="movimientoForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="cuentaId">ID de Cuenta (Numérico)</label>
+      <input type="number" id="cuentaId" formControlName="cuentaId" placeholder="Ej: 1">
+      <div *ngIf="movimientoForm.get('cuentaId')?.touched && movimientoForm.get('cuentaId')?.invalid" class="error">
+        ID de Cuenta es requerido
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="tipoMovimiento">Tipo de Movimiento</label>
+      <select id="tipoMovimiento" formControlName="tipoMovimiento">
+        <option value="DEPOSITO">Depósito</option>
+        <option value="RETIRO">Retiro</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="valor">Valor</label>
+      <input type="number" id="valor" formControlName="valor" step="0.01">
+      <div *ngIf="movimientoForm.get('valor')?.touched && movimientoForm.get('valor')?.invalid" class="error">
+        Valor positivo es requerido
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="movimientoForm.invalid || isSubmitting">
+      {{ isSubmitting ? 'Procesando...' : 'Realizar Movimiento' }}
+    </button>
+  </form>
+</div>

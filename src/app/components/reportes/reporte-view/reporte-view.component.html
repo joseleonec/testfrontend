@@ -1,0 +1,58 @@
+<div class="container">
+  <h2>Generar Reporte</h2>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <form [formGroup]="reporteForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="fechaInicio">Fecha Inicio</label>
+      <input type="date" id="fechaInicio" formControlName="fechaInicio">
+    </div>
+
+    <div class="form-group">
+      <label for="fechaFin">Fecha Fin</label>
+      <input type="date" id="fechaFin" formControlName="fechaFin">
+    </div>
+
+    <div class="form-group">
+      <label for="clienteId">Usuario (Cliente ID - ej: juanosorio)</label>
+      <input type="text" id="clienteId" formControlName="clienteId">
+    </div>
+
+    <button type="submit" [disabled]="reporteForm.invalid || isSubmitting">
+      {{ isSubmitting ? 'Generando...' : 'Generar' }}
+    </button>
+  </form>
+
+  <div *ngIf="reporteData" class="report-results">
+    <h3>Resultados del Reporte</h3>
+    <div *ngFor="let item of reporteData" class="account-card">
+      <h4>Cuenta: {{ item.cuenta.numeroCuenta }} ({{ item.cuenta.tipoCuenta }})</h4>
+      <p>Saldo: {{ item.cuenta.saldoDisponible }}</p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Saldo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mov of item.movimientos">
+            <td>{{ mov.fecha | date:'short' }}</td>
+            <td>{{ mov.tipoMovimiento }}</td>
+            <td>{{ mov.valor }}</td>
+            <td>{{ mov.saldo }}</td>
+          </tr>
+          <tr *ngIf="item.movimientos.length === 0">
+            <td colspan="4" class="text-center">No hay movimientos en este periodo.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
