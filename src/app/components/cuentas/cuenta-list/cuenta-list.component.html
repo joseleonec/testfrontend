@@ -1,0 +1,37 @@
+<div class="header-actions">
+  <h2>Cuentas</h2>
+  <button class="btn-primary" (click)="crearCuenta()">Nueva Cuenta</button>
+</div>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Numero Cuenta</th>
+        <th>Tipo</th>
+        <th>Saldo Inicial</th>
+        <th>Saldo Disponible</th>
+        <th>Estado</th>
+        <!-- <th>Cliente ID</th> -->
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cuenta of cuentas">
+        <td>{{ cuenta.numeroCuenta }}</td>
+        <td>{{ cuenta.tipoCuenta }}</td>
+        <td>{{ cuenta.saldoInicial }}</td>
+        <td>{{ cuenta.saldoDisponible }}</td>
+        <td>{{ cuenta.estado === 'True' || cuenta.estado === true ? 'Activo' : 'Inactivo' }}</td>
+        <!-- <td>{{ cuenta.clienteId }}</td> -->
+        <td class="actions">
+          <button class="btn-icon edit" (click)="editarCuenta(cuenta)">Editar</button>
+          <button class="btn-icon delete" (click)="eliminarCuenta(cuenta.id!)">Eliminar</button>
+        </td>
+      </tr>
+      <tr *ngIf="cuentas.length === 0">
+        <td colspan="6" class="text-center">No hay cuentas registradas.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

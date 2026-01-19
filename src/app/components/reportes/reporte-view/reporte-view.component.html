@@ -37,6 +37,7 @@
           <tr>
             <th>Fecha</th>
             <th>Tipo</th>
+            <th>Saldo Inicial</th>
             <th>Valor</th>
             <th>Saldo</th>
           </tr>
@@ -45,11 +46,12 @@
           <tr *ngFor="let mov of item.movimientos">
             <td>{{ mov.fecha | date:'short' }}</td>
             <td>{{ mov.tipoMovimiento }}</td>
+            <td>{{ mov.saldoInicial }}</td>
             <td>{{ mov.valor }}</td>
             <td>{{ mov.saldo }}</td>
           </tr>
           <tr *ngIf="item.movimientos.length === 0">
-            <td colspan="4" class="text-center">No hay movimientos en este periodo.</td>
+            <td colspan="5" class="text-center">No hay movimientos en este periodo.</td>
           </tr>
         </tbody>
       </table>

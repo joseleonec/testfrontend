@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CuentaService } from '../../../services/cuenta.service';
 import { Cuenta } from '../../../models/cuenta.dto';
 
@@ -19,7 +20,8 @@ export class CuentaCreateComponent {
 
   constructor(
     private fb: FormBuilder,
-    private cuentaService: CuentaService
+    private cuentaService: CuentaService,
+    private router: Router
   ) {
     this.cuentaForm = this.fb.group({
       numeroCuenta: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
@@ -40,23 +42,17 @@ export class CuentaCreateComponent {
     this.successMessage = '';
 
     const cuentaData: Cuenta = this.cuentaForm.value;
-    // Map string 'True'/'False' to boolean if backend expects boolean, 
-    // but DTO allows string | boolean and Postman showed string 'True'.
-    // Keeping it as is from form.
 
     this.cuentaService.create(cuentaData).subscribe({
       next: (res) => {
-        this.successMessage = `Cuenta creada exitosamente con ID: ${res.id}`;
+        this.successMessage = `Cuenta creada exitosamente.`;
         this.isSubmitting = false;
-        this.cuentaForm.reset({ 
-          tipoCuenta: 'Ahorros', 
-          estado: 'True', 
-          saldoInicial: 0 
-        });
+        alert('Cuenta creada exitosamente');
+        this.router.navigate(['/cuentas']);
       },
       error: (error) => {
         console.error('Error creating cuenta:', error);
-        this.errorMessage = 'Error al crear la cuenta. Verifique el Cliente ID y intente nuevamente.';
+        this.errorMessage = 'Error al crear la cuenta.';
         this.isSubmitting = false;
       }
     });

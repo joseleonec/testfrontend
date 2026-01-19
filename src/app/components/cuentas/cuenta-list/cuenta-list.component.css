@@ -1,0 +1,122 @@
+/* Main layout */
+:host {
+  display: block;
+  padding: 20px;
+  background-color: #f5f5f5; /* Light gray background for the page area */
+  min-height: 100%;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-actions h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Primary Button (Yellow/Gold per previous context) */
+.btn-primary {
+  background-color: #ffda00;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+  background-color: #e6c300;
+}
+
+/* Table Container */
+.table-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  overflow: hidden; /* For rounded corners */
+  border: 1px solid #eee;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: #fff;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+th {
+  padding: 15px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 15px 20px;
+  color: #444;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.95rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #fafafa;
+}
+
+/* Action Buttons */
+.actions {
+  white-space: nowrap;
+}
+
+.btn-icon {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.btn-icon.edit {
+  color: #0066cc;
+}
+
+.btn-icon.edit:hover {
+  background-color: #e6f0ff;
+}
+
+.btn-icon.delete {
+  color: #d32f2f;
+}
+
+.btn-icon.delete:hover {
+  background-color: #ffebee;
+}
+
+.text-center {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 30px;
+}
