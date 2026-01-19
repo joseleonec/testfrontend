@@ -37,20 +37,27 @@ export class MovimientoCreateComponent {
     this.errorMessage = '';
     this.successMessage = '';
 
-    const movimientoData = this.movimientoForm.value;
+    const movimientoData: Movimiento = this.movimientoForm.value;
     
-    // Simulate backend processing
-    console.log('Creating movimiento (Simulation):', movimientoData);
-
-    setTimeout(() => {
-        const simulatedBalance = 1000 - (movimientoData.tipoMovimiento === 'RETIRO' ? movimientoData.valor : -movimientoData.valor);
-        
-        this.successMessage = `Movimiento registrado exitosamente. Nuevo saldo disponible: ${simulatedBalance}`;
+    // Set positive/negative based on type if needed, or leave as absolute value depending on backend logic.
+    // Assuming backend logic (here in-memory service) handles it or we pass it as is.
+    // Previous simulation logic:
+    // const simulatedBalance = 1000 - (movimientoData.tipoMovimiento === 'RETIRO' ? movimientoData.valor : -movimientoData.valor);
+    
+    this.movimientoService.create(movimientoData).subscribe({
+      next: (res) => {
+        this.successMessage = `Movimiento registrado exitosamente. (ID: ${res.id})`;
         this.isSubmitting = false;
         this.movimientoForm.reset({ 
             tipoMovimiento: 'DEPOSITO', 
             valor: 0 
         });
-    }, 1000);
+      },
+      error: (error) => {
+        console.error('Error creating movimiento:', error);
+        this.errorMessage = 'Error al realizar el movimiento.';
+        this.isSubmitting = false;
+      }
+    });
   }
 }
