@@ -15,6 +15,9 @@
         <div>
             <h3>Resultados del Reporte</h3>
             <h4 *ngIf="reporteData.length > 0" style="margin: 5px 0 0 0; color: #555;">Cliente: {{ reporteData[0].cuenta.cliente }}</h4>
+            <p *ngIf="searchCriteria" style="margin: 5px 0 0 0; color: #777; font-size: 0.9em;">
+                Periodo: {{ searchCriteria.fechaInicio }} a {{ searchCriteria.fechaFin }}
+            </p>
         </div>
         <div class="action-buttons no-print">
             <button class="btn-primary" (click)="printReport()" style="width: auto; margin-right: 10px;">Imprimir</button>

@@ -15,6 +15,7 @@ export class ReporteViewComponent {
   reporteData: ReporteResponse | null = null;
   errorMessage = '';
   isLoading = false;
+  searchCriteria: {fechaInicio: string, fechaFin: string, clienteId: string} | null = null;
 
   constructor(
     private reporteService: ReporteService
@@ -24,6 +25,7 @@ export class ReporteViewComponent {
     this.isLoading = true;
     this.errorMessage = '';
     this.reporteData = null; // Clear previous results
+    this.searchCriteria = criteria;
 
     console.log('Generating report for:', criteria.clienteId, criteria.fechaInicio, criteria.fechaFin);
     
@@ -43,6 +45,7 @@ export class ReporteViewComponent {
   clearReport(): void {
     this.reporteData = null;
     this.errorMessage = '';
+    this.searchCriteria = null;
   }
 
   printReport(): void {
@@ -52,6 +55,10 @@ export class ReporteViewComponent {
     const clienteName = this.reporteData && this.reporteData.length > 0 
       ? this.reporteData[0].cuenta.cliente 
       : 'N/A';
+    
+    const rangeText = this.searchCriteria 
+      ? `Periodo: ${this.searchCriteria.fechaInicio} a ${this.searchCriteria.fechaFin}` 
+      : '';
 
     let contentHtml = `
       <html>
@@ -59,8 +66,9 @@ export class ReporteViewComponent {
         <title>Reporte Financiero - ${clienteName}</title>
         <style>
           body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 40px; color: #333; }
-          h2 { text-align: center; margin-bottom: 10px; }
-          h3 { text-align: center; color: #555; margin-top: 0; margin-bottom: 30px; }
+          h2 { text-align: center; margin-bottom: 5px; }
+          h3 { text-align: center; color: #555; margin-top: 0; margin-bottom: 5px; }
+          .date-range { text-align: center; color: #777; margin-bottom: 30px; font-size: 0.9em; }
           .account-card { border: 1px solid #ddd; padding: 20px; margin-bottom: 30px; border-radius: 8px; page-break-inside: avoid; }
           h4 { margin-top: 0; margin-bottom: 10px; color: #333; font-size: 1.1em; }
           p { margin: 5px 0 15px 0; color: #666; }
@@ -80,6 +88,7 @@ export class ReporteViewComponent {
       <body>
         <h2>Estado de Cuenta</h2>
         <h3>Cliente: ${clienteName}</h3>
+        <div class="date-range">${rangeText}</div>
     `;
 
     this.reporteData?.forEach(item => {
