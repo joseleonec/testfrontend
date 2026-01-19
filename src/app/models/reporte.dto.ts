@@ -4,6 +4,7 @@ export interface CuentaReporte {
   numeroCuenta: string;
   saldoDisponible: number;
   estado: string;
+  cliente: string;
 }
 
 export interface MovimientoReporte {

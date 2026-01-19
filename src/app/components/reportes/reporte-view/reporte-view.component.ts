@@ -39,53 +39,18 @@ export class ReporteViewComponent {
 
     const { fechaInicio, fechaFin, clienteId } = this.reporteForm.value;
 
-    console.log('Generating report (Simulation) for:', clienteId, fechaInicio, fechaFin);
+    console.log('Generating report for:', clienteId, fechaInicio, fechaFin);
     
-    setTimeout(() => {
-        // Hardcoded simulation data
-        this.reporteData = [
-            {
-                cuenta: {
-                    id: 2,
-                    tipoCuenta: "Corriente",
-                    numeroCuenta: "225487",
-                    saldoDisponible: 700,
-                    estado: "True"
-                },
-                movimientos: [
-                    {
-                        id: 2,
-                        fecha: "2026-01-18T09:20:41.801552",
-                        tipoMovimiento: "DEPOSITO",
-                        valor: 600,
-                        saldoInicial: 100,
-                        saldo: 700,
-                        cuentaId: 2
-                    }
-                ]
-            },
-            {
-                cuenta: {
-                    id: 4,
-                    tipoCuenta: "Ahorros",
-                    numeroCuenta: "496825",
-                    saldoDisponible: 0,
-                    estado: "True"
-                },
-                movimientos: [
-                    {
-                        id: 4,
-                        fecha: "2026-01-18T09:21:00.039209",
-                        tipoMovimiento: "RETIRO",
-                        valor: -540,
-                        saldoInicial: 540,
-                        saldo: 0,
-                        cuentaId: 4
-                    }
-                ]
-            }
-        ];
+    this.reporteService.getReporte(fechaInicio, fechaFin, clienteId).subscribe({
+      next: (data) => {
+        this.reporteData = data;
         this.isSubmitting = false;
-    }, 1000);
+      },
+      error: (error) => {
+        console.error('Error fetching reporte:', error);
+        this.errorMessage = 'Error al generar el reporte.';
+        this.isSubmitting = false;
+      }
+    });
   }
 }
