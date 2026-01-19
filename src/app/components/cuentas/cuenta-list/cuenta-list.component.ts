@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { CuentaService } from '../../../services/cuenta.service';
 import { Cuenta } from '../../../models/cuenta.dto';
+import { CuentaService } from '../../../services/cuenta.service';
 
 @Component({
   selector: 'app-cuenta-list',

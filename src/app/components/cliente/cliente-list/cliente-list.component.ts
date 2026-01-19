@@ -34,7 +34,7 @@ export class ClienteListComponent implements OnInit {
     console.log('Editar cliente:', cliente);
   }
 
-  eliminarCliente(id: string) {
+  eliminarCliente(id: number) {
     if(confirm('¿Está seguro de eliminar este cliente?')) {
         this.clienteService.delete(id).subscribe(() => {
           this.loadClientes();

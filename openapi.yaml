@@ -1,0 +1,372 @@
+openapi: 3.0.0
+info:
+  title: luchotest-sofka
+  version: 1.0.0
+  description: API generated from Postman collection
+servers:
+  - url: http://localhost:8080
+    description: Local server
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+  schemas:
+    Cliente:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nombre:
+          type: string
+        genero:
+          type: string
+        edad:
+          type: integer
+        identificacion:
+          type: string
+        direccion:
+          type: string
+        telefono:
+          type: string
+        clienteId:
+          type: string
+        contrasena:
+          type: string
+        estado:
+          type: string
+          example: "True"
+    
+    Cuenta:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        tipoCuenta:
+          type: string
+          enum: [Ahorros, Corriente]
+        numeroCuenta:
+          type: string
+        saldoInicial:
+          type: number
+          format: double
+        estado:
+          type: string
+          example: "True"
+        clienteId:
+          type: integer
+        saldoDisponible:
+          type: number
+          format: double
+          readOnly: true
+        nombreCliente:
+            type: string
+            readOnly: true
+
+    Movimiento:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        fecha:
+          type: string
+          format: date-time
+          readOnly: true
+        tipoMovimiento:
+          type: string
+          enum: [RETIRO, DEPOSITO]
+        valor:
+          type: number
+          format: double
+        saldoInicial:
+          type: number
+          format: double
+          readOnly: true
+        saldo:
+          type: number
+          format: double
+          readOnly: true
+        cuentaId:
+          type: integer
+
+    ReporteRequest:
+      type: object
+      properties:
+        clienteId:
+          type: integer
+        fechaInicio:
+          type: string
+          format: date
+          example: "2026-01-01"
+        fechaFin:
+          type: string
+          format: date
+          example: "2026-01-31"
+
+    ReporteItem:
+      type: object
+      properties:
+        cuenta:
+          $ref: '#/components/schemas/Cuenta'
+        movimientos:
+          type: array
+          items:
+            $ref: '#/components/schemas/Movimiento'
+
+security:
+  - basicAuth: []
+
+paths:
+  /clientes:
+    post:
+      tags:
+        - Clientes
+      summary: Create a new client
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cliente'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+
+  /clientes/{id}:
+    get:
+      tags:
+        - Clientes
+      summary: Get client by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+    put:
+      tags:
+        - Clientes
+      summary: Update client
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cliente'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cliente'
+    delete:
+      tags:
+        - Clientes
+      summary: Delete client
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Client deleted successfully
+        '404':
+          description: Client not found
+
+  /cuentas:
+    post:
+      tags:
+        - Cuentas
+      summary: Create a new account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cuenta'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cuenta'
+        '400':
+          description: Bad Request
+
+  /cuentas/{id}:
+    get:
+      tags:
+        - Cuentas
+      summary: Get account by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cuenta'
+    put:
+      tags:
+        - Cuentas
+      summary: Update account
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cuenta'
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad request
+    delete:
+      tags:
+        - Cuentas
+      summary: Delete account
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Account deleted successfully
+        '404':
+          description: Account not found
+
+  /movimientos:
+    post:
+      tags:
+        - Movimientos
+      summary: Create a new movement
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Movimiento'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movimiento'
+        '400':
+          description: Insufficient balance or bad request
+
+  /movimientos/{id}:
+    get:
+      tags:
+        - Movimientos
+      summary: Get movement by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movimiento'
+    put:
+      tags:
+        - Movimientos
+      summary: Update movement
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Movimiento'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movimiento'
+    delete:
+      tags:
+        - Movimientos
+      summary: Delete movement
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Movement deleted successfully
+
+  /reportes:
+    post:
+      tags:
+        - Reportes
+      summary: Generate report
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReporteRequest'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ReporteItem'
+        '204':
+          description: No content found for report

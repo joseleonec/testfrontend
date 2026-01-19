@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MovimientoService } from '../../../services/movimiento.service';
 import { Movimiento } from '../../../models/movimiento.dto';
+import { MovimientoService } from '../../../services/movimiento.service';
 
 @Component({
   selector: 'app-movimiento-create',

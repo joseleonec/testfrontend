@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ClienteService } from '../../../services/cliente.service';
-import { ClienteRequest } from '../../../models/cliente.dto';
 
 @Component({
   selector: 'app-cliente-create',

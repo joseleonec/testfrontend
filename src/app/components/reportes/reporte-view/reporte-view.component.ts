@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReporteResponse } from '../../../models/reporte.dto';
-import { ReporteService } from '../../../services/reporte.service';
 import { ReporteSearchComponent } from '../reporte-search/reporte-search.component';
+import { ReporteService } from '../../../services/reporte.service';
 
 @Component({
   selector: 'app-reporte-view',
