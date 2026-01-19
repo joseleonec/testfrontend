@@ -2788,87 +2788,6 @@
               "body": null
             },
             {
-              "name": "200",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n    \"clienteId\": 102,\r\n    \"fechaInicio\": \"2026-01-01\",\r\n    \"fechaFin\": \"2026-01-31\"\r\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "{{BASE_URL}}/reportes",
-                  "host": [
-                    "{{BASE_URL}}"
-                  ],
-                  "path": [
-                    "reportes"
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": null,
-              "header": [
-                {
-                  "key": "X-Content-Type-Options",
-                  "value": "nosniff"
-                },
-                {
-                  "key": "X-XSS-Protection",
-                  "value": "0"
-                },
-                {
-                  "key": "Cache-Control",
-                  "value": "no-cache, no-store, max-age=0, must-revalidate"
-                },
-                {
-                  "key": "Pragma",
-                  "value": "no-cache"
-                },
-                {
-                  "key": "Expires",
-                  "value": "0"
-                },
-                {
-                  "key": "X-Frame-Options",
-                  "value": "DENY"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                },
-                {
-                  "key": "Transfer-Encoding",
-                  "value": "chunked"
-                },
-                {
-                  "key": "Date",
-                  "value": "Sat, 17 Jan 2026 17:24:51 GMT"
-                },
-                {
-                  "key": "Keep-Alive",
-                  "value": "timeout=60"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive"
-                }
-              ],
-              "cookie": [],
-              "body": "[\n    {\n        \"cuenta\": {\n            \"id\": 4,\n            \"tipoCuenta\": \"Ahorros\",\n            \"numeroCuenta\": \"4789562\",\n            \"saldoInicial\": 3000.25,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"fecha\": \"2026-01-17T12:07:11.547519\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": 500,\n                \"saldo\": 2500,\n                \"cuentaId\": 4\n            },\n            {\n                \"fecha\": \"2026-01-17T12:07:34.325798\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": 500.25,\n                \"saldo\": 3000.25,\n                \"cuentaId\": 4\n            }\n        ]\n    },\n    {\n        \"cuenta\": {\n            \"id\": 5,\n            \"tipoCuenta\": \"Ahorros\",\n            \"numeroCuenta\": \"478956332\",\n            \"saldoInicial\": 2900.25,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"fecha\": \"2026-01-17T12:21:32.261906\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": 500.25,\n                \"saldo\": 2500.25,\n                \"cuentaId\": 5\n            },\n            {\n                \"fecha\": \"2026-01-17T12:21:37.463133\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": 700.25,\n                \"saldo\": 3200.5,\n                \"cuentaId\": 5\n            },\n            {\n                \"fecha\": \"2026-01-17T12:21:40.846636\",\n                \"tipoMovimiento\": \"rETIRO\",\n                \"valor\": -300.25,\n                \"saldo\": 2900.25,\n                \"cuentaId\": 5\n            }\n        ]\n    }\n]"
-            },
-            {
               "name": "reportes",
               "originalRequest": {
                 "method": "POST",
@@ -3016,7 +2935,7 @@
                 },
                 {
                   "key": "Date",
-                  "value": "Sun, 18 Jan 2026 14:21:44 GMT"
+                  "value": "Mon, 19 Jan 2026 04:39:07 GMT"
                 },
                 {
                   "key": "Keep-Alive",
@@ -3028,7 +2947,7 @@
                 }
               ],
               "cookie": [],
-              "body": "[\n    {\n        \"cuenta\": {\n            \"id\": 2,\n            \"tipoCuenta\": \"Corriente\",\n            \"numeroCuenta\": \"225487\",\n            \"saldoDisponible\": 700,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"id\": 2,\n                \"fecha\": \"2026-01-18T09:20:41.801552\",\n                \"tipoMovimiento\": \"DEPOSITO\",\n                \"valor\": 600,\n                \"saldoInicial\": 100,\n                \"saldo\": 700,\n                \"cuentaId\": 2\n            }\n        ]\n    },\n    {\n        \"cuenta\": {\n            \"id\": 4,\n            \"tipoCuenta\": \"Ahorros\",\n            \"numeroCuenta\": \"496825\",\n            \"saldoDisponible\": 0,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"id\": 4,\n                \"fecha\": \"2026-01-18T09:21:00.039209\",\n                \"tipoMovimiento\": \"RETIRO\",\n                \"valor\": -540,\n                \"saldoInicial\": 540,\n                \"saldo\": 0,\n                \"cuentaId\": 4\n            }\n        ]\n    }\n]"
+              "body": "[\n    {\n        \"cuenta\": {\n            \"id\": 2,\n            \"tipoCuenta\": \"Corriente\",\n            \"numeroCuenta\": \"225487\",\n            \"nombreCliente\": \"Marianela Montalvo\",\n            \"saldoDisponible\": 700,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"id\": 2,\n                \"fecha\": \"2026-01-18T09:20:41.801552\",\n                \"tipoMovimiento\": \"DEPOSITO\",\n                \"valor\": 600,\n                \"saldoInicial\": 100,\n                \"saldo\": 700,\n                \"cuentaId\": 2\n            }\n        ]\n    },\n    {\n        \"cuenta\": {\n            \"id\": 4,\n            \"tipoCuenta\": \"Ahorros\",\n            \"numeroCuenta\": \"496825\",\n            \"nombreCliente\": \"Marianela Montalvo\",\n            \"saldoDisponible\": 0,\n            \"estado\": \"True\"\n        },\n        \"movimientos\": [\n            {\n                \"id\": 4,\n                \"fecha\": \"2026-01-18T09:21:00.039209\",\n                \"tipoMovimiento\": \"RETIRO\",\n                \"valor\": -540,\n                \"saldoInicial\": 540,\n                \"saldo\": 0,\n                \"cuentaId\": 4\n            }\n        ]\n    }\n]"
             }
           ]
         }
