@@ -24,7 +24,7 @@ export class ClienteCreateComponent {
   ) {
     this.clienteForm = this.fb.group({
       // Fields present in the template
-      nombres: ['', Validators.required],
+      nombre: ['', Validators.required],
       direccion: ['', Validators.required],
       telefono: ['', Validators.required],
       contrasena: ['', [Validators.required, Validators.minLength(4)]],
@@ -51,7 +51,6 @@ export class ClienteCreateComponent {
     // Map form values to DTO
     const clienteData: any = {
       ...formValue,
-      nombre: formValue.nombres, // Map nombres to nombre
       estado: formValue.estado, // Keep boolean
       // Defaults for missing fields
       identificacion: formValue.identificacion || '9999999999',

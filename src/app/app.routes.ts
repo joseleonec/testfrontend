@@ -9,6 +9,7 @@ import { ReporteViewComponent } from './components/reportes/reporte-view/reporte
 export const routes: Routes = [
   { path: 'clientes', component: ClienteListComponent },
   { path: 'clientes/create', component: ClienteCreateComponent },
+  { path: 'clientes/edit/:id', component: ClienteCreateComponent },
   { path: 'cuentas', component: CuentaListComponent },
   { path: 'cuentas/create', component: CuentaCreateComponent },
   { path: 'movimientos/create', component: MovimientoCreateComponent },
