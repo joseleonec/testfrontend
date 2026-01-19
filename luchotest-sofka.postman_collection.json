@@ -486,6 +486,106 @@
           ]
         },
         {
+          "name": "get all",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/clientes",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "clientes"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/clientes",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "clientes"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 19 Jan 2026 05:10:09 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"Masculino\",\n        \"edad\": 30,\n        \"identificacion\": \"000000001\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"clienteId\": \"joselema\",\n        \"estado\": \"True\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Marianela Montalvo\",\n        \"genero\": \"Femenino\",\n        \"edad\": 30,\n        \"identificacion\": \"000000002\",\n        \"direccion\": \"Amazonas y NNUU\",\n        \"telefono\": \"097548965\",\n        \"clienteId\": \"marianelamontalvo\",\n        \"estado\": \"True\"\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Juan Osorio\",\n        \"genero\": \"Masculino\",\n        \"edad\": 30,\n        \"identificacion\": \"000000003\",\n        \"direccion\": \"13 junio y Equinoccial\",\n        \"telefono\": \"098874587\",\n        \"clienteId\": \"juanosorio\",\n        \"estado\": \"True\"\n    }\n]"
+            }
+          ]
+        },
+        {
           "name": "update",
           "request": {
             "auth": {
@@ -1465,6 +1565,91 @@
               ],
               "cookie": [],
               "body": "{\n    \"id\": 1,\n    \"tipoCuenta\": \"Ahorros\",\n    \"saldoInicial\": 200,\n    \"estado\": true,\n    \"clienteId\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "get all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/cuentas",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "cuentas"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BASE_URL}}/cuentas",
+                  "host": [
+                    "{{BASE_URL}}"
+                  ],
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 19 Jan 2026 05:10:55 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 5,\n        \"tipoCuenta\": \"Corriente\",\n        \"numeroCuenta\": \"585545\",\n        \"saldoInicial\": 1000,\n        \"saldoDisponible\": 1000,\n        \"estado\": \"True\",\n        \"clienteId\": 1\n    },\n    {\n        \"id\": 1,\n        \"tipoCuenta\": \"Ahorro\",\n        \"numeroCuenta\": \"478758\",\n        \"saldoInicial\": 2000,\n        \"saldoDisponible\": 1425,\n        \"estado\": \"True\",\n        \"clienteId\": 1\n    },\n    {\n        \"id\": 2,\n        \"tipoCuenta\": \"Corriente\",\n        \"numeroCuenta\": \"225487\",\n        \"saldoInicial\": 100,\n        \"saldoDisponible\": 700,\n        \"estado\": \"True\",\n        \"clienteId\": 2\n    },\n    {\n        \"id\": 3,\n        \"tipoCuenta\": \"Ahorros\",\n        \"numeroCuenta\": \"495878\",\n        \"saldoInicial\": 0,\n        \"saldoDisponible\": 150,\n        \"estado\": \"True\",\n        \"clienteId\": 3\n    },\n    {\n        \"id\": 4,\n        \"tipoCuenta\": \"Ahorros\",\n        \"numeroCuenta\": \"496825\",\n        \"saldoInicial\": 540,\n        \"saldoDisponible\": 0,\n        \"estado\": \"True\",\n        \"clienteId\": 2\n    }\n]"
             }
           ]
         },
@@ -2696,7 +2881,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"clienteId\": 2,\r\n    \"fechaInicio\": \"2026-01-01\",\r\n    \"fechaFin\": \"2026-01-31\"\r\n}",
+              "raw": "{\r\n    \"clienteId\": 1,\r\n    \"fechaInicio\": \"2026-01-01\",\r\n    \"fechaFin\": \"2026-01-31\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
