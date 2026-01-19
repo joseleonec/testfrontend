@@ -31,7 +31,7 @@ export class ClienteListComponent implements OnInit {
   }
 
   editarCliente(cliente: any) {
-    console.log('Editar cliente:', cliente);
+    this.router.navigate(['/clientes/edit', cliente.id]);
   }
 
   eliminarCliente(id: number) {
