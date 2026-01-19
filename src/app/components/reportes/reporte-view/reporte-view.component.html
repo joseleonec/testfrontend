@@ -14,7 +14,7 @@
     <div class="header-results">
         <div>
             <h3>Resultados del Reporte</h3>
-            <h4 *ngIf="reporteData.length > 0" style="margin: 5px 0 0 0; color: #555;">Cliente: {{ reporteData[0].cuenta.cliente }}</h4>
+            <h4 *ngIf="reporteData.length > 0" style="margin: 5px 0 0 0; color: #555;">Cliente: {{ reporteData[0].cuenta.nombreCliente }}</h4>
             <p *ngIf="searchCriteria" style="margin: 5px 0 0 0; color: #777; font-size: 0.9em;">
                 Periodo: {{ searchCriteria.fechaInicio }} a {{ searchCriteria.fechaFin }}
             </p>
@@ -47,7 +47,7 @@
             <td>{{ mov.valor }}</td>
             <td>{{ mov.saldo }}</td>
           </tr>
-          <tr *ngIf="item.movimientos.length === 0">
+          <tr *ngIf="!item.movimientos || item.movimientos.length === 0">
             <td colspan="5" class="text-center">No hay movimientos en este periodo.</td>
           </tr>
         </tbody>

@@ -53,7 +53,7 @@ export class ReporteViewComponent {
     if (!printWindow) return;
 
     const clienteName = this.reporteData && this.reporteData.length > 0 
-      ? this.reporteData[0].cuenta.cliente 
+      ? this.reporteData[0].cuenta.nombreCliente 
       : 'N/A';
     
     const rangeText = this.searchCriteria 
