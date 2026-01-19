@@ -12,8 +12,14 @@
 
   <div *ngIf="reporteData" class="report-results">
     <div class="header-results">
-        <h3>Resultados del Reporte</h3>
-        <button class="btn-primary" (click)="clearReport()" style="width: auto;">Volver</button>
+        <div>
+            <h3>Resultados del Reporte</h3>
+            <h4 *ngIf="reporteData.length > 0" style="margin: 5px 0 0 0; color: #555;">Cliente: {{ reporteData[0].cuenta.cliente }}</h4>
+        </div>
+        <div class="action-buttons no-print">
+            <button class="btn-primary" (click)="printReport()" style="width: auto; margin-right: 10px;">Imprimir</button>
+            <button class="btn-primary" (click)="clearReport()" style="width: auto;">Volver</button>
+        </div>
     </div>
 
     <div *ngFor="let item of reporteData" class="account-card">
